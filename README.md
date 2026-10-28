@@ -6,9 +6,11 @@
 `index.html` をブラウザで開いてください。
 
 ## 祭りの写真を入れる
-`assets/img/matsuri/` に画像を保存し、次のファイル名にしてください。
+`img/` に画像を保存し、次のファイル名にしてください。
 - `matsuri-main.jpg`
-- `matsuri-01.jpg`
+- `matsuri-01.png`
+
+商品画像6枚（`product1.png` ～ `product6.png`）も `img/` に入っています。
 
 ## 商品を変更する
 `products.js` の商品名・説明・価格などを編集します。現在の商品・価格は仮データです。

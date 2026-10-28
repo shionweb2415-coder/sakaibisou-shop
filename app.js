@@ -4,7 +4,7 @@ const toast = document.getElementById("toast");
 function renderProducts(category="all"){
   grid.innerHTML = products.filter(p=>category==="all"||p.category===category).map(p=>`
     <article class="product-card">
-      <div class="product-art" aria-hidden="true">${p.icon}</div>
+      <div class="product-art"><img src="img/product${p.id}.png" alt="${p.name}" style="width:100%;height:100%;object-fit:contain"></div>
       <div class="eyebrow">${p.categoryName}</div><h3>${p.name}</h3><p>${p.description}</p>
       <div class="product-bottom"><span class="price">¥${p.price.toLocaleString("ja-JP")} <small>（仮価格）</small></span><button class="add" aria-label="${p.name}をカートに追加" data-add="${p.id}">＋</button></div>
     </article>`).join("");

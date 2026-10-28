@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+<rect width="600" height="500" fill="#f0f1eb"/>
+<circle cx="300" cy="220" r="95" fill="#e1e6d8"/>
+<path d="M230 250 L340 140 L370 170 L260 280 Z" fill="#24483d"/>
+<path d="M330 150 L360 120 Q375 105 390 120 L400 130 Q415 145 400 160 L370 190 Z" fill="#d8e65c"/>
+<text x="300" y="380" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#69736f">PRODUCT IMAGE</text>
+</svg>
