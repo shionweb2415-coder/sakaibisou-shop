@@ -3,101 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="さかい美装オンラインショップの試作品です。商品・価格・販売条件は仮の内容です。">
-  <title>SAKAI BISOU STORE｜オンラインショップ（デモ）</title>
+  <title>さかい美装 | オンラインショップ 試作品</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="demo-banner">DEMO SITE — 商品・価格・販売条件はすべて仮の内容です</div>
   <header class="site-header">
-    <a class="brand" href="#" aria-label="SAKAI BISOU STORE トップ">
-      <span class="brand-mark">SB</span>
-      <span class="brand-copy"><strong>SAKAI BISOU</strong><small>ONLINE STORE</small></span>
-    </a>
-    <nav class="main-nav" aria-label="メインナビゲーション">
-      <a href="#products">商品一覧</a>
-      <a href="#about">ショップについて</a>
-      <a href="#guide">ご利用ガイド</a>
-    </nav>
-    <button class="cart-button" id="open-cart" aria-label="カートを開く">
-      <span aria-hidden="true">🛒</span> カート <b id="cart-count">0</b>
-    </button>
+    <a class="brand" href="#"><span class="brand-mark">S</span><span>さかい美装<small>ONLINE SHOP / DEMO</small></span></a>
+    <nav><a href="#products">商品を見る</a><a href="#about">さかい美装について</a><button id="cart-button">カート <b id="cart-count">0</b></button></nav>
   </header>
-
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">TOOLS FOR BETTER WORK</p>
-        <h1>仕事に、確かな道具を。<br><span>毎日の現場を、もっと快適に。</span></h1>
-        <p class="hero-description">塗装・メンテナンスの現場で役立つアイテムを、必要な人へ。<br>こちらはショップの方向性を検討するためのデモサイトです。</p>
-        <a class="primary-button" href="#products">商品を見てみる <span>→</span></a>
+        <p class="eyebrow">SAKAI BISOU · SHOP CONCEPT</p>
+        <h1>現場を支える道具を、<br><em>もっと身近に。</em></h1>
+        <p>塗装・メンテナンスに役立つ商品をお届けする、オンラインショップの試作品です。</p>
+        <a class="cta" href="#products">商品ラインナップを見る <span>↗</span></a>
       </div>
-      <div class="hero-art" aria-label="作業用品のイメージ">
-        <div class="art-circle"></div>
-        <div class="art-card art-card-back"><span>COLOR</span><strong>01</strong></div>
-        <div class="art-card art-card-front"><div class="brush-icon">▰</div><span>WORK<br>ESSENTIALS</span><strong>SAKAI<br>BISOU</strong></div>
-        <div class="art-note">QUALITY<br>IN EVERY DETAIL</div>
+      <div class="hero-photo">
+        <img src="assets/img/matsuri/matsuri-main.jpg" alt="祭りの写真（差し替え用）" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="photo-placeholder"><span>祭りの写真をここに表示</span><small>assets/img/matsuri/matsuri-main.jpg</small></div>
+        <div class="photo-tag">地域とともに</div>
       </div>
     </section>
-
-    <section class="trust-strip" aria-label="ショップの特徴">
-      <div><span class="trust-icon">✓</span><span><strong>現場目線</strong><small>使いやすさを大切に</small></span></div>
-      <div><span class="trust-icon">◇</span><span><strong>選びやすい商品</strong><small>必要なものをシンプルに</small></span></div>
-      <div><span class="trust-icon">↗</span><span><strong>地域の仕事を支える</strong><small>さかい美装のショップ構想</small></span></div>
-    </section>
-
-    <section class="products-section section-wrap" id="products">
-      <div class="section-heading">
-        <div><p class="eyebrow">PICK UP ITEMS</p><h2>おすすめ商品</h2><p>商品構成は検討用のサンプルです。</p></div>
-        <div class="product-controls">
-          <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="商品を検索" aria-label="商品を検索"></label>
-          <select id="category-filter" aria-label="カテゴリで絞り込む"><option value="all">すべてのカテゴリ</option></select>
-        </div>
-      </div>
-      <div class="category-chips" id="category-chips"></div>
+    <section class="intro" id="about"><span class="eyebrow">ABOUT US</span><h2>地域に根ざした仕事から、<br>暮らしを支える商品へ。</h2><p>こちらは社内検討用のデザイン案です。商品・価格・写真は仮の内容です。</p></section>
+    <section class="products" id="products">
+      <div class="section-heading"><div><span class="eyebrow">PICK UP</span><h2>おすすめ商品</h2></div><div class="filters"><button class="filter active" data-category="all">すべて</button><button class="filter" data-category="paint">塗装用品</button><button class="filter" data-category="tools">道具・資材</button></div></div>
       <div class="product-grid" id="product-grid"></div>
-      <p class="empty-state" id="empty-state" hidden>該当する商品がありません。検索条件を変更してください。</p>
     </section>
-
-    <section class="about-section" id="about">
-      <div class="about-inner">
-        <div class="about-mark">SB<span>.</span></div>
-        <div><p class="eyebrow">ABOUT THIS SHOP</p><h2>現場を知る会社から、<br>道具選びの新しい選択肢を。</h2>
-          <p>塗装や建物のメンテナンスに関わる会社ならではの視点を活かし、仕事に役立つ商品を届けるオンラインショップを目指します。</p>
-          <p class="note">※この文章はコンセプト案です。会社の正式な紹介文ではありません。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section section-wrap" id="guide">
-      <div class="section-heading"><div><p class="eyebrow">SHOP GUIDE</p><h2>ご利用ガイド</h2></div></div>
-      <div class="guide-grid">
-        <article><span>01</span><h3>ご注文について</h3><p>本サイトは検討用デモです。現在、実際の注文は受け付けていません。</p></article>
-        <article><span>02</span><h3>お支払いについて</h3><p>決済方法は未定です。正式公開前に決済サービスを選定します。</p></article>
-        <article><span>03</span><h3>配送・返品について</h3><p>送料・配送日数・返品条件は、販売商品と運用方法が決まり次第設定します。</p></article>
-      </div>
+    <section class="festival">
+      <div><span class="eyebrow">LOCAL CONNECTION</span><h2>地域とのつながりを<br>大切に。</h2><p>公式ホームページの祭りの写真を追加して、会社らしさが伝わるショップに仕上げます。</p></div>
+      <img src="assets/img/matsuri/matsuri-01.jpg" alt="祭りの写真（差し替え用）" onerror="this.style.display='none'">
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="footer-top"><a class="brand brand-footer" href="#"><span class="brand-mark">SB</span><span class="brand-copy"><strong>SAKAI BISOU</strong><small>ONLINE STORE CONCEPT</small></span></a><p>オンラインショップ構想・試作品</p></div>
-    <div class="footer-bottom"><span>© SAKAI BISOU — DEMO</span><span>このサイトは検討用の試作品です</span></div>
-  </footer>
-
-  <div class="overlay" id="overlay" hidden></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-label="ショッピングカート" aria-hidden="true">
-    <div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>ショッピングカート</h2></div><button class="icon-button" id="close-cart" aria-label="カートを閉じる">×</button></div>
-    <div id="cart-items" class="cart-items"></div>
-    <div class="cart-footer"><div class="subtotal"><span>小計（仮）</span><strong id="cart-total">¥0</strong></div><p>送料・税の扱いは正式公開時に設定します。</p><button class="primary-button full-button" id="demo-checkout">注文手続きのデモへ <span>→</span></button><small>※実際の注文・決済は行われません。</small></div>
-  </aside>
-  <div class="modal" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
-    <button class="icon-button modal-close" id="close-modal" aria-label="閉じる">×</button>
-    <p class="eyebrow">DEMO CHECKOUT</p><h2 id="modal-title">注文手続きのイメージ</h2>
-    <p>これは試作品です。注文情報の送信や決済は行われません。</p>
-    <p class="modal-total">カート小計：<strong id="modal-total">¥0</strong></p>
-    <button class="primary-button full-button" id="back-to-shop">ショップに戻る</button>
-  </div>
-  <script src="products.js"></script>
-  <script src="app.js"></script>
+  <footer><span>© さかい美装 — SHOP DEMO</span><span>※ 試作品です。注文・決済は行われません。</span></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="products.js"></script><script src="app.js"></script>
 </body>
 </html>
