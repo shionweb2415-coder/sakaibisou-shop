@@ -9,65 +9,84 @@
   <link rel="stylesheet" href="tshirt.css">
 </head>
 <body class="tshirt-page">
-  <header class="site-header">
+  <header class="site-header tee-header">
     <a class="brand" href="index.html" aria-label="さかい美装 ショップトップへ">
-      <span class="brand-mark">S</span><span>さかい美装<small>ONLINE SHOP / DEMO</small></span>
+      <span class="brand-mark">S</span>
+      <span>さかい美装<small>SAKAI BISOU / CUSTOM WEAR</small></span>
     </a>
     <nav aria-label="メインナビゲーション">
-      <a href="index.html#products">商品を見る</a>
-      <a href="#order" class="nav-tee-link">Tシャツ制作依頼</a>
-      <a href="index.html#about">さかい美装について</a>
+      <a href="index.html#products" class="tee-link-muted">商品一覧</a>
+      <a href="index.html#about" class="tee-link-muted">さかい美装について</a>
+      <a href="#order" class="nav-tee-link">制作を相談する <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main>
-    <section class="tee-hero">
+    <section class="tee-hero" aria-labelledby="hero-title">
       <div class="tee-hero-copy">
-        <p class="eyebrow">CREATE SOMETHING ORIGINAL</p>
-        <h1>そのアイデアを、<br><em>一枚のTシャツに。</em></h1>
-        <p class="tee-lead">イベント、チーム、お店のユニフォームに。イメージが決まっていなくても大丈夫。用途や枚数、ご希望を入力して、オリジナルTシャツの制作を相談できます。</p>
-        <a class="cta" href="#order">制作内容を入力する <span aria-hidden="true">↗</span></a>
-        <p class="tee-hero-sub">まずはお見積もりのご相談から。入力だけで制作が確定することはありません。</p>
+        <p class="tee-kicker"><span class="tee-kicker-line"></span> ORIGINAL T-SHIRT / CUSTOM MADE</p>
+        <p class="tee-display" aria-hidden="true">MAKE IT<span class="tee-display-second">YOURS<span class="tee-display-dot">.</span></span></p>
+        <h1 id="hero-title">あなたの「つくりたい」を、<br>一枚のTシャツに。</h1>
+        <p class="tee-lead">お店のユニフォームも、チームの一体感も、特別な日の一枚も。<br>アイデアだけでも、デザインが完成していても。まずは気軽にご相談ください。</p>
+        <div class="tee-hero-actions">
+          <a class="tee-primary-button tee-hero-cta" href="#order">制作の相談をはじめる <span aria-hidden="true">↗</span></a>
+          <span class="tee-hero-sub">お見積もりのご相談から。<br>この入力だけでは注文確定になりません。</span>
+        </div>
+        <div class="tee-hero-index"><span>DESIGN YOUR OWN.</span><span>01 / 03</span></div>
       </div>
-      <div class="tee-hero-art" aria-label="Tシャツのイメージイラスト">
-        <div class="tee-art-caption">YOUR IDEA, YOUR T-SHIRT.</div>
-        <svg class="tee-back" viewBox="0 0 340 365" role="img" aria-label="背景のTシャツイメージ">
-          <path d="M109 32 L141 15 Q170 29 199 15 L231 32 L303 76 L274 143 L239 126 L239 343 L101 343 L101 126 L66 143 L37 76 Z" fill="#dbe7c7" stroke="#b9cbad" stroke-width="3" stroke-linejoin="round" />
-          <path d="M141 15 Q170 75 199 15" fill="none" stroke="#b9cbad" stroke-width="3" />
+      <div class="tee-hero-art" role="img" aria-label="ブラックとホワイトのオリジナルTシャツのデザインイメージ">
+        <div class="tee-art-top"><span>YOUR IDEA.</span><span>YOUR STYLE.</span></div>
+        <div class="tee-art-ring" aria-hidden="true"></div>
+        <svg class="tee-back" viewBox="0 0 340 365" aria-hidden="true">
+          <defs><linearGradient id="white-shirt" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dedfdc"/></linearGradient></defs>
+          <path d="M108 33 L139 14 Q170 28 201 14 L232 33 L304 77 L275 143 L239 126 L239 345 L101 345 L101 126 L65 143 L36 77 Z" fill="url(#white-shirt)" stroke="#bec0bb" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M139 14 Q170 75 201 14" fill="none" stroke="#c8cbc5" stroke-width="3"/>
+          <path d="M103 334h135" fill="none" stroke="#c8cbc5" stroke-width="2"/>
+          <text x="170" y="185" text-anchor="middle" fill="#969b91" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="4">CUSTOM</text>
+          <text x="170" y="212" text-anchor="middle" fill="#303430" font-family="Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="-1">STUDIO.</text>
         </svg>
-        <svg class="tee-front" viewBox="0 0 340 365" role="img" aria-label="手前のTシャツイメージ">
-          <path d="M109 32 L141 15 Q170 29 199 15 L231 32 L303 76 L274 143 L239 126 L239 343 L101 343 L101 126 L66 143 L37 76 Z" fill="#224a36" stroke="#123222" stroke-width="3" stroke-linejoin="round" />
-          <path d="M141 15 Q170 75 199 15" fill="none" stroke="#133825" stroke-width="3" />
-          <text x="170" y="179" text-anchor="middle" font-size="18" fill="#d7f36a" font-weight="900" letter-spacing="4">YOUR</text>
-          <text x="170" y="210" text-anchor="middle" font-size="28" fill="#fff" font-weight="900" letter-spacing="2">DESIGN</text>
-          <path d="M119 228 H221" stroke="#d7f36a" stroke-width="4" />
-          <text x="170" y="248" text-anchor="middle" font-size="9" fill="#d7f36a" letter-spacing="3">ORIGINAL T-SHIRT</text>
+        <svg class="tee-front" viewBox="0 0 340 365" aria-hidden="true">
+          <defs><linearGradient id="dark-shirt" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#393b40"/><stop offset=".55" stop-color="#1c1e20"/><stop offset="1" stop-color="#111214"/></linearGradient></defs>
+          <path d="M108 33 L139 14 Q170 28 201 14 L232 33 L304 77 L275 143 L239 126 L239 345 L101 345 L101 126 L65 143 L36 77 Z" fill="url(#dark-shirt)" stroke="#101113" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M139 14 Q170 75 201 14" fill="none" stroke="#55585b" stroke-width="3"/>
+          <path d="M103 334h135" stroke="#434648" stroke-width="2"/>
+          <text x="170" y="154" text-anchor="middle" fill="#d6ff3f" font-family="Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="5">WEAR</text>
+          <text x="170" y="200" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="49" font-weight="900" letter-spacing="-2">YOUR</text>
+          <text x="170" y="242" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="51" font-weight="900" letter-spacing="-2">IDEA</text>
+          <path d="M111 258h118" stroke="#d6ff3f" stroke-width="5"/>
+          <text x="170" y="274" text-anchor="middle" fill="#d6ff3f" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2">MAKE IT ORIGINAL</text>
         </svg>
-        <div class="tee-sticker">MAKE IT<br>YOURS <span>↗</span></div>
-        <span class="tee-art-note">※イラストはイメージです</span>
+        <div class="tee-art-stamp" aria-hidden="true">THE<br>ONE &amp;<br>ONLY<span>↗</span></div>
+        <span class="tee-art-note">※ デザインイメージです</span>
+        <span class="tee-art-index" aria-hidden="true">CUSTOM SERIES — 001</span>
       </div>
     </section>
 
+    <div class="tee-ticker" aria-hidden="true"><span>YOUR IDEA.</span><span class="tee-ticker-star">✳</span><span>YOUR TEAM.</span><span class="tee-ticker-star">✳</span><span>YOUR ORIGINAL.</span><span class="tee-ticker-star">✳</span><span>YOUR STYLE.</span></div>
+
     <section class="tee-uses" aria-labelledby="tee-uses-heading">
-      <div class="tee-center-title"><span class="eyebrow">FOR YOUR OCCASION</span><h2 id="tee-uses-heading">こんなTシャツのご相談に</h2></div>
+      <div class="tee-section-intro">
+        <div><span class="tee-section-label"><span>01</span> FOR EVERY OCCASION</span><h2 id="tee-uses-heading">つくる理由は、<br><em>人それぞれ。</em></h2></div>
+        <p>イベントも、仕事も、仲間との思い出も。<br>シーンに合わせた一枚を、いっしょに考えます。</p>
+      </div>
       <div class="tee-use-grid">
-        <article class="tee-use"><span class="tee-use-num">01</span><h3>イベント・お祭り</h3><p>スタッフや参加メンバーでおそろいの一枚を。</p></article>
-        <article class="tee-use"><span class="tee-use-num">02</span><h3>店舗・仕事用</h3><p>お店の名前やロゴを入れたオリジナルウェアに。</p></article>
-        <article class="tee-use"><span class="tee-use-num">03</span><h3>チーム・サークル</h3><p>仲間の想いやチームカラーを形に。</p></article>
+        <article class="tee-use"><span class="tee-use-num">01 / EVENT</span><span class="tee-use-graphic" aria-hidden="true">FEST.</span><div class="tee-use-body"><h3>イベント・お祭り</h3><p>みんなで着る一枚に、<br>特別な日の思い出を。</p><span aria-hidden="true">↗</span></div></article>
+        <article class="tee-use"><span class="tee-use-num">02 / WORK</span><span class="tee-use-graphic" aria-hidden="true">CREW.</span><div class="tee-use-body"><h3>店舗・スタッフ用</h3><p>お店のロゴや名前を、<br>オリジナルのユニフォームに。</p><span aria-hidden="true">↗</span></div></article>
+        <article class="tee-use"><span class="tee-use-num">03 / TEAM</span><span class="tee-use-graphic" aria-hidden="true">UNIT.</span><div class="tee-use-body"><h3>チーム・サークル</h3><p>チームカラーや想いを、<br>おそろいのデザインに。</p><span aria-hidden="true">↗</span></div></article>
       </div>
     </section>
 
     <section class="tee-how" aria-labelledby="tee-how-heading">
-      <div class="tee-center-title"><span class="eyebrow">HOW IT WORKS</span><h2 id="tee-how-heading">ご相談から制作まで</h2><p>ご相談内容を確認し、お見積もりや仕様の確認を経て制作を進める想定です。</p></div>
+      <div class="tee-how-top"><div><span class="tee-section-label"><span>02</span> HOW IT WORKS</span><h2 id="tee-how-heading">相談から、完成まで。</h2></div><p>まずはご希望をお聞かせください。お見積もりと仕様を確認してから、制作を進めます。</p></div>
       <div class="tee-flow">
-        <div><span>STEP 01</span><strong>ご希望を入力</strong><p>用途・デザイン・枚数などをお知らせください。</p></div>
-        <div><span>STEP 02</span><strong>内容確認・お見積もり</strong><p>ご要望を確認しながら仕様を決めます。</p></div>
-        <div><span>STEP 03</span><strong>仕様確定・制作</strong><p>金額や条件をご確認いただいた後に制作します。</p></div>
+        <div><span>01</span><strong>イメージを伝える</strong><p>用途、枚数、デザインの希望をフォームに入力。</p></div>
+        <div><span>02</span><strong>お見積もり・相談</strong><p>内容を確認し、カラーや仕様、料金をご案内。</p></div>
+        <div><span>03</span><strong>内容を確定・制作</strong><p>条件をご確認いただいた後に制作を進めます。</p></div>
       </div>
     </section>
 
     <section class="tee-order-section" id="order" aria-labelledby="tee-order-heading">
-      <div class="tee-order-heading"><span class="eyebrow">REQUEST FORM</span><h2 id="tee-order-heading">Tシャツ制作のご相談</h2><p>わかる範囲だけでも大丈夫です。<strong>※印は必須項目</strong>です。</p></div>
+      <div class="tee-order-heading"><div><span class="tee-section-label"><span>03</span> GET STARTED</span><h2 id="tee-order-heading">あなただけの一枚を、<br><em>ここから。</em></h2></div><p>まだ決まっていないことがあってもOK。<br>わかる範囲でご入力ください。<strong>※印は必須項目です。</strong></p></div>
       <div class="tee-order-layout">
         <form id="tshirt-form" class="tee-form" autocomplete="on">
           <fieldset class="tee-fieldset">
@@ -85,7 +104,7 @@
                 <option value="" selected disabled>選択してください</option>
                 <option>完成したデザインがある</option><option>ロゴ・イラストなど素材がある</option><option>イメージだけ決まっている</option><option>デザインから相談したい</option>
               </select>
-              <small>※デザインデータの添付は、受付方法の設定後に対応します。</small>
+              <small>デザイン画像がある場合は、メールアプリで作成したメールに添付してください。</small>
             </div>
             <div class="tee-field">
               <label for="details">デザインのイメージ・ご希望</label>
@@ -151,21 +170,22 @@
           </fieldset>
 
           <div class="tee-form-actions">
-            <p>入力内容をご確認いただくためのフォームです。<br>現在は試作段階のため、この画面から情報が自動送信されることはありません。</p>
+            <p>入力内容をご確認いただくためのフォームです。<br>このフォームからは自動送信されません。確認後、メールアプリで送信してください。</p>
             <button type="submit" class="tee-primary-button">入力内容を確認する <span aria-hidden="true">↗</span></button>
           </div>
         </form>
 
         <aside class="tee-form-side" aria-label="ご相談についてのご案内">
           <div class="tee-side-card">
-            <span class="eyebrow">LET'S MAKE IT</span>
-            <h3>まずは、つくりたいものをお聞かせください。</h3>
+            <span class="tee-side-eyebrow">BE YOURSELF. BE ORIGINAL.</span>
+            <span class="tee-side-big" aria-hidden="true">LET'S<br>MAKE<br>IT.</span>
+            <h3>はじめは、アイデアだけでも。</h3>
             <p>プリント位置やデザイン、枚数がまだ決まっていなくても構いません。わかる範囲の内容から整理できます。</p>
             <div class="tee-side-rule"></div>
             <h4>お見積もりの前に</h4>
             <p>価格・納期・取り扱いカラーなどは、このページには確定情報を掲載していません。制作条件は個別に確認する前提です。</p>
           </div>
-          <div class="tee-side-small">※このページは社内検討用の試作品です。送信・添付機能を公開する際は、受付先と個人情報の取り扱いについて設定してください。</div>
+          <div class="tee-side-small">ご依頼内容は入力後に確認できます。メールアプリを開いて送信する方式のため、このフォーム上では自動送信されません。</div>
         </aside>
       </div>
 
@@ -178,12 +198,12 @@
           <a id="email-order" class="tee-primary-button" href="#" hidden>メールアプリで送る</a>
         </div>
         <p id="copy-status" role="status" class="tee-copy-status" aria-live="polite"></p>
-        <p class="tee-review-note">※コピーした内容は、別途決めた受付先へお送りください。デザイン画像等の添付はこのフォームではできません。</p>
+        <p class="tee-review-note">※メールアプリを開いてから送信操作をしてください。デザイン画像がある場合は、メールに添付できます。</p>
       </section>
     </section>
   </main>
 
-  <footer><span>© さかい美装 — SHOP DEMO</span><span>※ 試作品です。注文・決済・依頼の自動送信は行われません。</span></footer>
+  <footer><span>© さかい美装 <span class="tee-footer-label">/ ORIGINAL T-SHIRT</span></span><span>※ 入力だけでは発注確定になりません。メール送信はお客様の操作が必要です。</span></footer>
   <script src="tshirt.js"></script>
 </body>
 </html>

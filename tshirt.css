@@ -1,44 +1,379 @@
-/* Tシャツ制作相談ページ専用。ショップ共通CSSの既存ルールは変更しません。 */
-.tshirt-page{background:var(--paper)}
-.tshirt-page .site-header{position:relative;z-index:3}
-.tshirt-page .site-header nav .nav-tee-link{font-weight:700}
-.tshirt-page .tee-hero{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);align-items:center;gap:4vw;padding:62px 8vw 70px;background:#e9eddf;overflow:hidden}
-.tee-hero-copy{max-width:600px}
-.tee-hero h1{font-size:clamp(37px,4.7vw,66px);line-height:1.4;letter-spacing:-.065em;margin:20px 0 18px}
-.tee-hero h1 em{font-style:normal;color:#507a3d}
-.tee-lead{font-size:14px;line-height:2.15;color:#59685c;max-width:510px}
-.tee-hero .cta{margin-top:23px}
-.tee-hero-sub{font-size:11px;color:#66806a;line-height:1.8;margin-top:17px}
-.tee-hero-art{height:420px;position:relative;background:radial-gradient(circle at 52% 36%,#f5f7e9 0%,#dfe8d8 60%,#d5e1ce 100%);overflow:hidden;isolation:isolate}
-.tee-hero-art:after{content:"";position:absolute;width:350px;height:350px;border:1px solid #bacfae;border-radius:50%;top:34px;left:calc(50% - 175px);z-index:-1}
-.tee-hero-art svg{position:absolute;width:275px;height:295px;filter:drop-shadow(0 16px 14px rgba(16,48,28,.16))}
-.tee-back{top:20px;right:0;transform:rotate(12deg)}.tee-front{left:5%;top:76px;transform:rotate(-9deg)}
-.tee-art-caption{position:absolute;top:21px;left:25px;letter-spacing:2px;font-size:10px;font-weight:800;color:#6a816c}
-.tee-sticker{position:absolute;right:19px;bottom:50px;border-radius:50%;background:var(--lime);width:115px;height:115px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:15px;line-height:1.35;transform:rotate(13deg);color:var(--ink);text-align:center;box-shadow:0 14px 25px #36462f18}
-.tee-sticker span{font-size:20px}
-.tee-art-note{position:absolute;bottom:14px;left:22px;font-size:10px;color:#66806a}
-.tee-center-title{text-align:center}.tee-center-title h2{font-size:clamp(26px,3vw,36px);margin:12px 0 22px;letter-spacing:-.04em}.tee-center-title>p{color:var(--muted);font-size:13px;line-height:1.9;margin:0 auto 34px}
-.tee-uses{padding:76px 8vw 84px;background:#fbfbf7}.tee-use-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:35px}
-.tee-use{padding:27px;background:#f0f2e9;border:1px solid #e6e9de;min-height:177px}.tee-use-num{font-size:11px;font-weight:900;letter-spacing:2px;color:#6d9867}.tee-use h3{font-size:17px;margin:18px 0 10px}.tee-use p{font-size:12px;color:var(--muted);line-height:1.85;margin:0}
-.tee-how{padding:73px 8vw 78px;background:#e9eddf}.tee-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:23px}
-.tee-flow>div{background:#fafbf5;padding:25px 24px;border-top:4px solid #a8d16d}.tee-flow span{display:block;font-size:11px;font-weight:900;color:#54805a;letter-spacing:1.5px;margin-bottom:15px}.tee-flow strong{font-size:17px}.tee-flow p{font-size:12px;line-height:1.8;color:var(--muted);margin-bottom:0}
-.tee-order-section{background:#fbfbf7;padding:90px 8vw 105px;scroll-margin-top:22px}.tee-order-heading{margin-bottom:36px}.tee-order-heading h2{font-size:clamp(29px,3.6vw,40px);margin:13px 0 14px}.tee-order-heading p{font-size:13px;color:var(--muted);line-height:1.8}.tee-order-heading strong{color:#536b57}
-.tee-order-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(260px,.8fr);align-items:start;gap:24px}.tee-form{background:#fff;border:1px solid #e2e7dc;padding:38px 36px 34px;min-width:0}
-.tee-fieldset{border:0;padding:0;margin:0 0 37px;min-width:0}.tee-fieldset:not(:first-child){padding-top:30px;border-top:1px solid var(--line)}.tee-fieldset legend{font-size:19px;font-weight:800;letter-spacing:-.03em;width:100%;padding:0 0 23px}.tee-form-step{display:inline-grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--green);color:var(--lime);font-size:11px;margin-right:8px;letter-spacing:0}
-.tee-field{margin-bottom:22px;min-width:0}.tee-field:last-child{margin-bottom:0}.tee-field>label,.tee-field-label{display:block;font-size:13px;font-weight:700;margin-bottom:9px}.tee-field small{font-size:11px;line-height:1.65;color:#788178;display:block;margin-top:8px}.required{color:#b54c4c;font-size:12px}
-.tee-field input:not([type=checkbox]):not([type=radio]),.tee-field select,.tee-field textarea{width:100%;min-width:0;background:#fcfdf9;border:1px solid #d9dfd5;border-radius:2px;color:var(--ink);font:inherit;font-size:14px;padding:13px 14px;outline:0;transition:border-color .15s,box-shadow .15s}
-.tee-field textarea{resize:vertical;min-height:102px;line-height:1.8}.tee-field input:focus,.tee-field select:focus,.tee-field textarea:focus{border-color:#5d8b56!important;box-shadow:0 0 0 3px #b6d5ac66}
-.tee-field input[hidden]{display:none!important}
-.tee-color-grid{display:flex;gap:8px;flex-wrap:wrap}.tee-color-option{cursor:pointer;display:flex;align-items:center;flex-direction:column;gap:7px;min-width:74px;border:1px solid var(--line);background:#fff;padding:13px 10px 11px;font-size:11px!important;font-weight:700;border-radius:3px;position:relative}
-.tee-color-option input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}.tee-color-option:has(input:checked){border-color:#315a3b;box-shadow:inset 0 0 0 1px #315a3b;background:#f5f8f1}.tee-color-option:has(input:focus-visible){outline:3px solid #9fcb70;outline-offset:2px}.tee-color-swatch{display:block;width:28px;height:28px;border-radius:50%;border:1px solid #d2d6cc}.swatch-white{background:#fff}.swatch-black{background:#171c1d}.swatch-navy{background:#25334c}.swatch-green{background:#315c43}.swatch-other{background:conic-gradient(#d8b1a5 0 90deg,#abbd87 90deg 180deg,#b0c5d1 180deg 270deg,#ded7ae 270deg)}
-.tee-size-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}.tee-size-grid label{font-size:12px;font-weight:800;text-align:center;background:#f7f9f4;border:1px solid #e4e7e0;padding:10px 6px}.tee-size-grid input{font-weight:700;text-align:center;margin:9px 0 0;padding:9px 3px!important}.tee-total{text-align:right;margin-top:12px;font-size:13px}.tee-total strong{font-size:24px;color:var(--green);padding:0 5px}.tee-field-error{font-size:12px;color:#b73e3e;margin:10px 0 0}.tee-checkbox-list{display:flex;flex-wrap:wrap;gap:9px}.tee-checkbox-list label{display:inline-flex;align-items:center;gap:8px;background:#f7f9f5;border:1px solid var(--line);padding:12px 14px;font-size:12px;font-weight:700;cursor:pointer}.tee-checkbox-list input{accent-color:#315a3b;width:16px;height:16px}
-.tee-two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.tee-two-col .tee-field{margin-bottom:22px}
-.tee-form-actions{padding-top:24px;border-top:1px solid var(--line)}.tee-form-actions p{font-size:11px;line-height:1.8;color:var(--muted);margin:0 0 20px}.tee-primary-button,.tee-secondary-button{font:inherit;display:inline-flex;align-items:center;justify-content:center;gap:20px;text-decoration:none;padding:16px 21px;border-radius:1px;font-size:13px;font-weight:800;cursor:pointer;transition:filter .2s}.tee-primary-button{background:var(--green);color:#fff;border:1px solid var(--green)}.tee-primary-button span{color:var(--lime)}.tee-primary-button:hover{filter:brightness(1.2)}.tee-secondary-button{background:#fff;color:var(--green);border:1px solid #9fae9f}.tee-secondary-button:hover{background:#f3f7ef}
-.tee-form-side{position:sticky;top:22px}.tee-side-card{background:var(--green);padding:35px 29px;color:#fff}.tee-side-card .eyebrow{color:var(--lime)}.tee-side-card h3{font-size:22px;line-height:1.7;margin:19px 0}.tee-side-card p{font-size:12px;color:#d4e1d7;line-height:2}.tee-side-rule{height:1px;background:#ffffff33;margin:28px 0}.tee-side-card h4{font-size:13px;margin-bottom:10px}.tee-side-small{font-size:11px;line-height:1.9;color:var(--muted);padding:16px 4px}
-.tee-review{margin-top:36px;background:#edf4e8;border:1px solid #bfd0b5;padding:28px;scroll-margin-top:25px}.tee-review[hidden]{display:none}.tee-review-top h3{font-size:23px;margin:10px 0}.tee-review-top p{font-size:12px;line-height:1.8;color:#657565}.tee-summary{white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;border:1px solid #d8e3d0;padding:23px;margin:22px 0;font:13px/2 "Noto Sans JP",Arial,sans-serif;max-height:460px;overflow:auto}.tee-review-actions{display:flex;flex-wrap:wrap;gap:10px}.tee-copy-status{font-size:12px;font-weight:700;color:var(--green);min-height:1.5em}.tee-review-note{font-size:11px;color:var(--muted);line-height:1.8}
-@media(max-width:1050px){.tee-order-layout{grid-template-columns:minmax(0,1fr) 235px}.tee-form{padding:30px 25px}.tee-hero-art svg{width:250px;height:280px}.tee-hero-art{height:370px}}
-@media(max-width:820px){.tee-order-layout{display:block}.tee-form-side{position:static;display:grid;grid-template-columns:1fr;gap:0;margin-top:20px}.tee-side-card{padding:25px 27px}.tee-hero{padding:48px 6vw 58px;gap:24px}.tee-hero-art{height:325px}.tee-hero-art svg{width:215px;height:235px}.tee-front{top:65px}.tee-sticker{width:90px;height:90px;font-size:13px;bottom:33px}.tee-back{top:20px}}
-@media(max-width:700px){.tshirt-page .site-header nav a.nav-tee-link{display:inline-block}.tshirt-page .site-header nav>a:not(.nav-tee-link){display:none}.tee-hero{grid-template-columns:1fr;padding:45px 6vw 50px}.tee-hero h1{font-size:clamp(33px,9vw,45px)}.tee-hero-art{height:295px}.tee-hero-art svg{width:220px;height:240px}.tee-hero-art .tee-front{left:11%;top:50px}.tee-hero-art .tee-back{right:6%}.tee-sticker{right:10px;bottom:26px}.tee-uses,.tee-how{padding:54px 5vw}.tee-use-grid,.tee-flow{grid-template-columns:1fr;gap:10px}.tee-use{min-height:auto}.tee-order-section{padding:60px 5vw 74px}.tee-form{padding:25px 19px}.tee-fieldset legend{font-size:17px}.tee-two-col{grid-template-columns:1fr;gap:0}.tee-color-option{min-width:65px;padding:10px 8px}.tee-size-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.tee-review{padding:19px}.tee-summary{padding:16px}.tee-review-actions>*{width:100%}}
-@media(prefers-reduced-motion:reduce){.tee-primary-button,.tee-secondary-button{transition:none}}
-/* hidden 属性をCSSの display 指定より優先する */
-.tshirt-page [hidden]{display:none!important}
+/*
+ * さかい美装 / オリジナルTシャツ制作相談ページ — editorial streetwear concept
+ * This stylesheet is scoped to .tshirt-page; index.html and shop products are unchanged.
+ * Form IDs and JavaScript behavior are unchanged.
+ */
+.tshirt-page {
+  --ink: #17191a;
+  --green: #17191a;
+  --lime: #d6ff3f;
+  --paper: #f7f7f3;
+  --muted: #767872;
+  --line: #e4e5df;
+  --tee-white: #ffffff;
+  --tee-dark: #191b1d;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Helvetica Neue", Arial, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.tshirt-page * { box-sizing: border-box; }
+.tshirt-page a:focus-visible,
+.tshirt-page button:focus-visible { outline: 3px solid #758bff; outline-offset: 4px; }
+.tshirt-page button, .tshirt-page input, .tshirt-page select, .tshirt-page textarea { font-family: inherit; }
+.tshirt-page [hidden] { display: none !important; }
+
+/* Navigation */
+.tshirt-page .tee-header {
+  position: relative;
+  z-index: 20;
+  padding: 0 clamp(22px, 5.3vw, 96px);
+  height: 88px;
+  min-height: 88px;
+  background: #f9f9f6;
+  border-bottom: 1px solid #eaeae6;
+}
+.tshirt-page .tee-header .brand { color: var(--ink); gap: 11px; letter-spacing: -.04em; font-size: 18px; }
+.tshirt-page .tee-header .brand-mark {
+  display: grid; place-items: center;
+  width: 38px; height: 38px;
+  background: #191b1d; color: #d6ff3f;
+  font-size: 23px; font-weight: 900;
+  border-radius: 9px;
+}
+.tshirt-page .tee-header .brand small { font-size: 9px; letter-spacing: .11em; font-weight: 650; color: #92948e; margin-top: 3px; }
+.tshirt-page .tee-header nav { gap: clamp(15px, 2.6vw, 36px); }
+.tshirt-page .tee-header nav a { font-size: 12px; font-weight: 650; color: #555a57; white-space: nowrap; }
+.tshirt-page .tee-header nav .nav-tee-link {
+  display: inline-flex; align-items: center; gap: 19px;
+  padding: 11px 17px; border: 0; border-radius: 100px;
+  background: var(--ink); color: #fff;
+  font-size: 12px; font-weight: 750;
+  transition: background .18s, transform .18s;
+}
+.tshirt-page .tee-header nav .nav-tee-link span { color: var(--lime); font-size: 17px; }
+.tshirt-page .tee-header nav .nav-tee-link:hover { background: #393d3a; transform: translateY(-1px); }
+
+/* Hero: editorial double-page treatment */
+.tshirt-page .tee-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.07fr) minmax(0, .93fr);
+  min-height: 615px;
+  background: #191b1d;
+  overflow: hidden;
+}
+.tee-hero-copy {
+  position: relative;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 59px clamp(28px, 5.4vw, 100px) 46px;
+  min-width: 0;
+}
+.tee-kicker {
+  display: flex; gap: 11px; align-items: center;
+  margin: 0 0 22px;
+  font-size: 10px; font-weight: 800; letter-spacing: .17em;
+  color: #c1c6b9;
+}
+.tee-kicker-line { display: inline-block; width: 25px; height: 2px; background: var(--lime); }
+.tee-display {
+  margin: 0 0 23px;
+  font-size: clamp(58px, 7.8vw, 130px);
+  line-height: .78;
+  letter-spacing: -.086em;
+  font-weight: 950;
+  color: #f9f9f4;
+  white-space: nowrap;
+}
+.tee-display-second { display: block; margin-top: 13px; }
+.tee-display-dot { color: var(--lime); }
+.tee-hero h1 {
+  margin: 9px 0 12px;
+  color: #fff;
+  font-weight: 750;
+  font-size: clamp(19px, 2vw, 27px);
+  line-height: 1.55;
+  letter-spacing: -.035em;
+}
+.tee-lead { color: #b9bdb5; font-size: 12px; font-weight: 450; line-height: 2; max-width: 570px; margin: 0; }
+.tee-hero-actions { display: flex; gap: 25px; align-items: center; flex-wrap: wrap; margin-top: 27px; }
+.tee-hero-sub { font-size: 10px; color: #8e958b; line-height: 1.8; }
+.tee-hero .tee-primary-button {
+  background: var(--lime); color: #111413; border: 1px solid var(--lime);
+  border-radius: 100px; padding: 17px 24px; min-height: 53px;
+  text-decoration: none; font-size: 12px; font-weight: 900; gap: 35px;
+  box-shadow: 0 8px 35px #d6ff3f18;
+}
+.tee-hero .tee-primary-button span { color: #111413; font-size: 18px; }
+.tee-hero .tee-primary-button:hover { background: #ecff99; border-color: #ecff99; transform: translateY(-2px); }
+.tee-hero-index {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 10px; font-weight: 750; letter-spacing: .12em;
+  color: #696e68; margin-top: auto; padding-top: 40px;
+}
+.tee-hero-art {
+  position: relative; min-height: 580px;
+  overflow: hidden; isolation: isolate;
+  background: #d6ff3f;
+}
+.tee-hero-art::before {
+  content: ""; position: absolute; width: 530px; height: 530px;
+  border: 1px solid #17191a26; border-radius: 50%;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.tee-hero-art::after {
+  content: ""; position: absolute; width: 340px; height: 340px;
+  border: 1px solid #17191a26; border-radius: 50%;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.tee-art-top { display: flex; justify-content: space-between; gap: 10px; position: absolute; top: 33px; left: 34px; right: 34px; font-size: 10px; font-weight: 850; letter-spacing: .14em; z-index: 3; }
+.tee-art-ring { position: absolute; width: 570px; height: 100px; left: 50%; top: 55%; transform: translate(-50%, -50%) rotate(-23deg); border: 1px solid #11111117; border-radius: 100%; z-index: 1; }
+.tee-hero-art svg { position: absolute; height: auto; filter: drop-shadow(0 18px 17px #16191835); }
+.tee-hero-art .tee-back { width: clamp(245px, 23vw, 340px); right: 3%; top: 14%; transform: rotate(16deg); z-index: 2; }
+.tee-hero-art .tee-front { width: clamp(290px, 28vw, 410px); left: 1%; top: 24%; transform: rotate(-12deg); z-index: 3; }
+.tee-art-stamp {
+  display: flex; flex-direction: column; justify-content: center;
+  position: absolute; z-index: 5; right: 4%; bottom: 11%;
+  border-radius: 50%; background: #191b1d; color: #f5f7ed;
+  width: clamp(104px, 10vw, 154px); height: clamp(104px, 10vw, 154px);
+  text-align: center; font-size: clamp(17px, 1.6vw, 24px); font-weight: 950;
+  line-height: .99; letter-spacing: -.055em; transform: rotate(13deg);
+}
+.tee-art-stamp span { display: block; color: var(--lime); font-size: 21px; padding-top: 6px; }
+.tee-art-note { position: absolute; left: 32px; bottom: 28px; z-index: 5; font-size: 10px; font-weight: 650; color: #3d4e22; }
+.tee-art-index { position: absolute; right: 35px; bottom: 25px; z-index: 5; font-size: 10px; font-weight: 900; letter-spacing: .12em; transform: none; color: #3d4e22; }
+
+/* Typographic separator */
+.tee-ticker {
+  background: #f2f3ed; color: #242726;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 20px; white-space: nowrap; overflow: hidden;
+  padding: 18px clamp(22px, 5.5vw, 104px);
+  border-bottom: 1px solid #e1e2da;
+  font-size: clamp(11px, 1.1vw, 15px); font-weight: 900; letter-spacing: -.04em;
+}
+.tee-ticker-star { color: #899b60; font-size: 18px; }
+
+/* A modern editorial grid of use cases */
+.tee-uses { background: #f7f7f3; padding: clamp(82px, 8.5vw, 144px) clamp(22px, 6vw, 110px) 110px; }
+.tee-section-intro, .tee-how-top, .tee-order-heading { display: flex; justify-content: space-between; gap: 26px; align-items: end; }
+.tee-section-label { display: inline-flex; align-items: center; gap: 13px; color: #6b6e67; font-weight: 900; font-size: 11px; letter-spacing: .11em; }
+.tee-section-label > span { display: inline-grid; place-items: center; background: #191b1d; color: var(--lime); width: 32px; height: 32px; border-radius: 50%; letter-spacing: 0; }
+.tee-section-intro h2, .tee-how h2, .tee-order-heading h2 {
+  margin: 24px 0 0; font-size: clamp(35px, 5vw, 68px); line-height: 1.3;
+  font-weight: 850; letter-spacing: -.075em;
+}
+.tee-section-intro h2 em, .tee-order-heading h2 em { font-style: normal; color: #7d8773; }
+.tee-section-intro > p, .tee-how-top > p, .tee-order-heading > p {
+  flex: 0 0 auto; font-size: 13px; color: #737772; line-height: 2; margin: 0 0 10px;
+}
+.tee-use-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 55px; }
+.tee-use { display: flex; flex-direction: column; justify-content: space-between; min-height: 337px; padding: 26px 27px 29px; overflow: hidden; position: relative; border-radius: 17px; background: #e8e9e2; }
+.tee-use:nth-child(2) { background: #dddfdd; }
+.tee-use:nth-child(3) { background: #e6eadf; }
+.tee-use::after { content: ""; width: 200px; height: 200px; border: 1px solid #00000015; border-radius: 50%; position: absolute; top: -100px; right: -80px; }
+.tee-use-num { position: relative; z-index: 1; font-size: 11px; color: #666c66; font-weight: 850; letter-spacing: .11em; }
+.tee-use-graphic { display: block; padding: 23px 0 14px; text-align: center; color: #c4cac0; font-size: clamp(52px, 7vw, 107px); font-weight: 950; line-height: 1; letter-spacing: -.1em; transform: rotate(-8deg); transition: transform .25s; }
+.tee-use:nth-child(2) .tee-use-graphic { color: #b5c0b8; transform: rotate(7deg); }
+.tee-use:nth-child(3) .tee-use-graphic { color: #bacbb4; }
+.tee-use:hover .tee-use-graphic { transform: rotate(-2deg) scale(1.04); }
+.tee-use-body { display: grid; grid-template-columns: 1fr auto; gap: 8px 10px; align-items: end; position: relative; z-index: 2; }
+.tee-use-body h3 { font-size: 18px; letter-spacing: -.04em; font-weight: 850; margin: 0; grid-column: 1; }
+.tee-use-body p { color: #686d67; font-size: 12px; line-height: 1.8; grid-column: 1; margin: 0; }
+.tee-use-body > span { display: grid; place-items: center; width: 40px; height: 40px; font-size: 18px; border-radius: 50%; background: #fff; grid-column: 2; grid-row: 1 / 3; }
+
+/* Timeline */
+.tee-how { padding: 92px clamp(22px, 6vw, 110px) 104px; background: #eceee8; }
+.tee-how h2 { font-size: clamp(34px, 4.4vw, 56px); }
+.tee-flow { margin-top: 55px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; position: relative; }
+.tee-flow::before { content: ""; position: absolute; left: 0; right: 0; top: 27px; height: 1px; background: #c6c9bf; }
+.tee-flow > div { position: relative; padding: 0 24px 0 0; }
+.tee-flow > div::before { content: ""; position: absolute; top: 21px; left: 0; border: 1px solid #151717; border-radius: 50%; width: 13px; height: 13px; background: #d6ff3f; }
+.tee-flow > div > span { display: block; font-size: 12px; font-weight: 900; letter-spacing: .06em; color: #3d453c; margin-bottom: 59px; }
+.tee-flow strong { font-size: clamp(17px, 2vw, 23px); letter-spacing: -.045em; }
+.tee-flow p { font-size: 12px; line-height: 1.9; color: #757a72; margin: 12px 0 0; }
+
+/* Form section */
+.tee-order-section { background: #f8f9f5; padding: 114px clamp(22px, 6vw, 110px) 116px; scroll-margin-top: 0; }
+.tee-order-heading { margin-bottom: 55px; }
+.tee-order-heading h2 { font-size: clamp(38px, 5.3vw, 66px); }
+.tee-order-heading > p strong { display: inline-block; color: #303630; font-weight: 800; }
+.tee-order-layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(265px, .8fr); gap: 24px; align-items: start; }
+.tee-form { min-width: 0; padding: clamp(26px, 4vw, 56px); border: 1px solid #eceee8; border-radius: 22px; background: #fff; box-shadow: 0 18px 65px #242b1e09; }
+.tee-fieldset { border: 0; padding: 0; min-width: 0; margin: 0 0 43px; }
+.tee-fieldset:not(:first-child) { border-top: 1px solid #ebede6; padding-top: 36px; }
+.tee-fieldset legend { width: 100%; padding: 0 0 26px; font-size: clamp(17px, 1.8vw, 22px); font-weight: 850; letter-spacing: -.05em; }
+.tee-form-step { display: inline-grid; place-items: center; width: 35px; height: 35px; margin-right: 10px; color: #191b1d; background: #d6ff3f; border-radius: 50%; font-size: 11px; font-weight: 900; letter-spacing: 0; vertical-align: middle; }
+.tee-field { margin-bottom: 23px; min-width: 0; }
+.tee-field:last-child { margin-bottom: 0; }
+.tee-field > label, .tee-field-label { display: block; font-size: 13px; font-weight: 850; margin-bottom: 10px; letter-spacing: -.015em; }
+.tee-field small { display: block; color: #929790; font-size: 11px; margin-top: 9px; line-height: 1.75; }
+.required { color: #d45a49; font-size: 13px; }
+.tee-field input:not([type=checkbox]):not([type=radio]), .tee-field select, .tee-field textarea {
+  display: block; width: 100%; min-width: 0; padding: 15px 16px;
+  background: #f8f9f6; border: 1px solid #e5e8e0; border-radius: 11px;
+  color: #202422; font-size: 14px; font-weight: 500;
+  outline: none; transition: border-color .15s, background .15s, box-shadow .15s;
+}
+.tee-field input::placeholder, .tee-field textarea::placeholder { color: #a0a49f; font-weight: 400; }
+.tee-field textarea { resize: vertical; min-height: 122px; line-height: 1.8; }
+.tee-field input:focus, .tee-field select:focus, .tee-field textarea:focus { background: #fff; border-color: #879f2f !important; box-shadow: 0 0 0 4px #d6ff3f4d; }
+.tee-field input[hidden] { display: none !important; }
+.tee-color-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+.tee-color-option { display: flex; flex-direction: column; align-items: center; gap: 10px; justify-content: center; min-width: 90px; padding: 15px 14px; border-radius: 13px; border: 1px solid #e7eae2; background: #f9faf7; cursor: pointer; position: relative; font-size: 11px !important; font-weight: 800; }
+.tee-color-option input { opacity: 0; position: absolute; inset: 0; cursor: pointer; width: 100%; height: 100%; margin: 0; }
+.tee-color-option:has(input:checked) { border-color: #101312; background: #f2f5eb; box-shadow: inset 0 0 0 1px #101312; }
+.tee-color-option:has(input:focus-visible) { outline: 3px solid #758bff; outline-offset: 2px; }
+.tee-color-swatch { display: block; width: 34px; height: 34px; border-radius: 50%; border: 1px solid #d7d9d3; }
+.swatch-white { background: #fff; } .swatch-black { background: #1a1a1a; } .swatch-navy { background: #222d4b; } .swatch-green { background: #315c43; } .swatch-other { background: conic-gradient(#d8b1a5 0 90deg, #abbd87 90deg 180deg, #b0c5d1 180deg 270deg, #ded7ae 270deg); }
+.tee-size-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+.tee-size-grid label { display: flex; flex-direction: column; align-items: center; font-size: 12px; font-weight: 850; padding: 12px 7px 9px; background: #f8f9f6; border: 1px solid #e8eae4; border-radius: 12px; }
+.tee-size-grid input { padding: 10px 2px !important; margin-top: 8px; text-align: center; border-radius: 7px !important; background: #fff !important; font-weight: 850; }
+.tee-total { display: flex; align-items: baseline; justify-content: flex-end; gap: 7px; margin-top: 14px; font-size: 12px; color: #646b63; }
+.tee-total strong { color: #191b1d; font-size: 31px; font-weight: 950; line-height: 1; }
+.tee-field-error { color: #bb3b35; font-size: 12px; margin: 9px 0 0; }
+.tee-checkbox-list { display: flex; flex-wrap: wrap; gap: 9px; }
+.tee-checkbox-list label { display: inline-flex; align-items: center; gap: 8px; padding: 13px 15px; border-radius: 100px; background: #f7f9f5; border: 1px solid #e6eae3; font-size: 12px; font-weight: 800; cursor: pointer; }
+.tee-checkbox-list label:has(input:checked) { background: #eff7cd; border-color: #9cbd2d; }
+.tee-checkbox-list input { accent-color: #191b1d; width: 16px; height: 16px; margin: 0; }
+.tee-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+.tee-two-col .tee-field { margin-bottom: 23px; }
+.tee-form-actions { border-top: 1px solid #ebede6; padding-top: 30px; }
+.tee-form-actions p { margin: 0 0 22px; color: #8a9186; font-size: 11px; line-height: 1.85; }
+.tee-primary-button, .tee-secondary-button { display: inline-flex; align-items: center; justify-content: center; gap: 24px; padding: 16px 25px; border-radius: 100px; font-size: 13px; font-weight: 850; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background .2s, transform .2s; }
+.tee-primary-button { background: #1b1d1e; color: #fff; border: 1px solid #1b1d1e; }
+.tee-primary-button span { color: var(--lime); font-size: 18px; }
+.tee-primary-button:hover { background: #3b3e3e; transform: translateY(-2px); }
+.tee-secondary-button { border: 1px solid #d6d9d1; background: #fff; color: #1b1d1e; }
+.tee-secondary-button:hover { background: #f3f4ef; }
+.tee-form-actions > .tee-primary-button { width: 100%; justify-content: space-between; min-height: 55px; padding-left: 24px; padding-right: 24px; }
+
+/* Sidebar */
+.tee-form-side { position: sticky; top: 24px; }
+.tee-side-card { padding: 34px clamp(22px, 3vw, 38px) 36px; background: #d6ff3f; color: #1c1e1e; border-radius: 19px; overflow: hidden; }
+.tee-side-eyebrow { font-size: 10px; font-weight: 900; letter-spacing: .11em; }
+.tee-side-big { display: block; margin-top: 42px; color: #191b1d; font-size: clamp(65px, 7.2vw, 121px); font-weight: 950; line-height: .78; letter-spacing: -.11em; }
+.tee-side-card h3 { font-size: clamp(19px, 2vw, 24px); font-weight: 850; letter-spacing: -.06em; line-height: 1.5; margin: 35px 0 13px; }
+.tee-side-card p { font-size: 12px; line-height: 1.95; color: #48522f; margin: 0; }
+.tee-side-rule { height: 1px; background: #272c2140; margin: 26px 0; }
+.tee-side-card h4 { margin: 0 0 11px; font-size: 13px; font-weight: 850; }
+.tee-side-small { padding: 18px 9px; font-size: 11px; line-height: 1.9; color: #8c9387; }
+
+/* Review output */
+.tee-review { margin-top: 35px; padding: clamp(22px, 3vw, 38px); background: #edf4d9; border: 1px solid #dce7c2; border-radius: 20px; scroll-margin-top: 25px; }
+.tee-review-top .eyebrow { color: #636b55; font-size: 11px; }
+.tee-review-top h3 { font-size: 27px; letter-spacing: -.04em; margin: 11px 0; }
+.tee-review-top p { color: #7c8670; font-size: 12px; line-height: 1.9; }
+.tee-summary { padding: 26px; margin: 25px 0; background: #fff; border: 1px solid #d9e5ca; border-radius: 12px; white-space: pre-wrap; overflow-wrap: anywhere; overflow: auto; max-height: 490px; font: 13px/2 Arial, "Noto Sans JP", sans-serif; }
+.tee-review-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.tee-copy-status { min-height: 1.5em; font-size: 12px; font-weight: 800; color: #25331e; }
+.tee-review-note { font-size: 11px; color: #7d8876; line-height: 1.8; }
+
+/* Footer */
+.tshirt-page footer { background: #191b1d; border: none; color: #c2c5bd; padding: 29px clamp(22px, 6vw, 110px); font-size: 11px; }
+.tee-footer-label { color: #81867a; font-weight: 650; }
+
+/* Width-dependent layouts */
+@media (max-width: 1190px) {
+  .tee-display { font-size: clamp(56px, 7.4vw, 105px); }
+  .tee-hero-art .tee-back { right: -4%; }
+  .tee-hero-art .tee-front { left: -5%; }
+  .tee-hero-actions { gap: 17px; }
+  .tee-order-layout { grid-template-columns: minmax(0, 1fr) 280px; }
+  .tee-side-big { font-size: 78px; }
+}
+@media (max-width: 950px) {
+  .tshirt-page .tee-header { height: 74px; min-height: 74px; }
+  .tshirt-page .tee-header nav .tee-link-muted { display: none; }
+  .tee-hero { min-height: 530px; }
+  .tee-hero-copy { padding: 45px 28px 32px; }
+  .tee-hero-art { min-height: 530px; }
+  .tee-hero-art .tee-front { width: 285px; top: 31%; }
+  .tee-hero-art .tee-back { width: 245px; top: 21%; }
+  .tee-display { font-size: clamp(55px, 8.5vw, 80px); }
+  .tee-hero-sub { display: none; }
+  .tee-hero h1 { font-size: 20px; }
+  .tee-use { min-height: 285px; padding: 21px; }
+  .tee-use-graphic { font-size: 6vw; }
+  .tee-order-layout { grid-template-columns: 1fr; }
+  .tee-form-side { position: static; display: grid; grid-template-columns: 1fr; }
+  .tee-side-card { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; align-items: start; }
+  .tee-side-eyebrow { grid-column: 1 / -1; }
+  .tee-side-big { grid-column: 1; grid-row: 2 / 6; font-size: 84px; margin-top: 25px; }
+  .tee-side-card h3 { margin: 28px 0 10px; }
+  .tee-side-rule { margin: 20px 0; }
+  .tee-side-card h4 { grid-column: 2; }
+  .tee-side-small { padding: 12px 3px; }
+}
+@media (max-width: 700px) {
+  .tshirt-page .tee-header { padding: 0 5vw; min-height: 68px; height: 68px; }
+  .tshirt-page .tee-header .brand { font-size: 15px; gap: 8px; }
+  .tshirt-page .tee-header .brand-mark { height: 33px; width: 33px; border-radius: 8px; font-size: 19px; }
+  .tshirt-page .tee-header .brand small { font-size: 7px; letter-spacing: 0; }
+  .tshirt-page .tee-header nav .nav-tee-link { padding: 10px 13px; font-size: 10px; gap: 9px; }
+  .tshirt-page .tee-hero { grid-template-columns: 1fr; }
+  .tee-hero-copy { padding: 55px 6vw 31px; }
+  .tee-kicker { margin-bottom: 24px; font-size: 9px; }
+  .tee-display { font-size: clamp(62px, 14vw, 105px); margin-bottom: 25px; }
+  .tee-display-second { margin-top: 11px; }
+  .tee-hero h1 { font-size: 21px; }
+  .tee-lead { font-size: 12px; }
+  .tee-hero-actions { margin-top: 25px; }
+  .tee-hero-sub { display: block; }
+  .tee-hero-index { padding-top: 44px; }
+  .tee-hero-art { min-height: 420px; }
+  .tee-hero-art::before { width: 400px; height: 400px; }
+  .tee-hero-art .tee-front { width: min(72vw, 315px); left: 6%; top: 17%; }
+  .tee-hero-art .tee-back { width: min(61vw, 265px); right: 0%; top: 9%; }
+  .tee-art-stamp { width: 101px; height: 101px; right: 4%; bottom: 12%; font-size: 18px; }
+  .tee-art-top { top: 22px; left: 22px; right: 22px; font-size: 9px; }
+  .tee-art-note { left: 22px; bottom: 19px; font-size: 9px; }
+  .tee-art-index { right: 22px; bottom: 19px; font-size: 8px; }
+  .tee-ticker { justify-content: flex-start; gap: 22px; padding: 15px 6vw; font-size: 12px; }
+  .tee-uses { padding: 75px 5vw 75px; }
+  .tee-section-intro, .tee-how-top, .tee-order-heading { display: block; }
+  .tee-section-intro h2, .tee-order-heading h2 { font-size: clamp(34px, 9vw, 49px); margin-top: 23px; }
+  .tee-section-intro > p, .tee-how-top > p, .tee-order-heading > p { font-size: 12px; margin-top: 23px; }
+  .tee-use-grid { grid-template-columns: 1fr; margin-top: 32px; gap: 13px; }
+  .tee-use { min-height: 247px; padding: 23px 25px; }
+  .tee-use-graphic { font-size: clamp(68px, 21vw, 100px); padding: 0; }
+  .tee-use-body h3 { font-size: 19px; }
+  .tee-how { padding: 72px 5vw 76px; }
+  .tee-how h2 { font-size: 34px; }
+  .tee-flow { display: block; margin-top: 34px; }
+  .tee-flow::before { top: 0; bottom: 0; left: 11px; right: auto; height: 100%; width: 1px; }
+  .tee-flow > div { padding: 0 0 30px 42px; }
+  .tee-flow > div:last-child { padding-bottom: 0; }
+  .tee-flow > div::before { left: 5px; top: 0; }
+  .tee-flow > div > span { margin: 0 0 12px; }
+  .tee-flow p { margin-top: 7px; }
+  .tee-order-section { padding: 76px 5vw 85px; }
+  .tee-order-heading { margin-bottom: 35px; }
+  .tee-form { border-radius: 18px; padding: 24px 19px 27px; }
+  .tee-fieldset { margin-bottom: 34px; }
+  .tee-fieldset legend { padding-bottom: 24px; font-size: 18px; }
+  .tee-fieldset:not(:first-child) { padding-top: 30px; }
+  .tee-two-col { grid-template-columns: 1fr; gap: 0; }
+  .tee-color-option { min-width: calc((100% - 20px) / 3); }
+  .tee-size-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .tee-checkbox-list label { padding: 12px 14px; }
+  .tee-form-actions > .tee-primary-button { width: 100%; }
+  .tee-side-card { display: block; padding: 26px; }
+  .tee-side-big { font-size: 83px; margin-top: 34px; }
+  .tee-side-card h3 { margin-top: 30px; }
+  .tee-review { padding: 22px 17px; }
+  .tee-summary { padding: 15px; }
+  .tee-review-actions > * { width: 100%; }
+  .tshirt-page footer { padding: 27px 5vw; flex-direction: column; gap: 9px; line-height: 1.7; }
+}
+@media (max-width: 380px) {
+  .tee-display { font-size: 13vw; }
+  .tee-hero-art { min-height: 355px; }
+  .tee-hero-art .tee-front { width: 75vw; }
+  .tee-hero-art .tee-back { width: 65vw; }
+  .tee-art-stamp { width: 87px; height: 87px; font-size: 15px; }
+  .tshirt-page .tee-header .brand small { display: none; }
+  .tee-color-option { min-width: calc((100% - 20px) / 3); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tshirt-page *, .tshirt-page *::before, .tshirt-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
