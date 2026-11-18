@@ -4,7 +4,7 @@
  * 現状はバックエンド／送信サービス未接続のため、自動送信はしません。
  * mailto: はお客様のメールアプリで下書きを開くだけです（自動送信ではありません）。
  */
-const ORDER_EMAIL = "";
+const ORDER_EMAIL = "shion.web2415@gmail.com";
 
 const form = document.getElementById("tshirt-form");
 const review = document.getElementById("review-panel");
